@@ -1,9 +1,9 @@
 import { FC } from 'react'
 
-import Carousel from 'Components/Carousel/Carousel'
+import Cover from 'Components/Cover/Cover'
 
 const App: FC = () => {
-	return <Carousel />
+	return <Cover />
 }
 
 export default App
