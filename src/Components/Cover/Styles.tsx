@@ -19,7 +19,11 @@ export const Container = styled.div`
 
 	padding: 100px 0;
 
-	position: relative;
+	position: fixed;
+
+	transition: opacity 0.5s;
+
+	opacity: 1;
 `
 
 export const TopGradient = styled.div`
