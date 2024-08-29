@@ -8,8 +8,7 @@ const App: FC = () => {
 	const HideCover = useCallback(() => SetIsCoverShowing(false), [])
 
 	useEffect(() => {
-		if (IsCoverShowing) document.body.style.overflowY = 'hidden'
-		else document.body.style.overflowY = 'auto'
+		document.body.style.overflowY = IsCoverShowing ? 'hidden' : 'auto'
 	}, [IsCoverShowing])
 
 	return (
