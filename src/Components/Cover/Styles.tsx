@@ -21,7 +21,7 @@ export const Container = styled.div`
 
 	position: fixed;
 
-	transition: opacity 0.5s;
+	transition: opacity 1s ease-in-out;
 
 	opacity: 1;
 `
