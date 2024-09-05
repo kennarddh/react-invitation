@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useState } from 'react'
 
 import Cover from 'Components/Cover/Cover'
+import Navbar from 'Components/Navbar/Navbar'
 
 const App: FC = () => {
 	const [IsCoverShowing, SetIsCoverShowing] = useState(true)
@@ -14,6 +15,7 @@ const App: FC = () => {
 	return (
 		<>
 			<Cover isShowing={IsCoverShowing} onHideCover={() => HideCover()} />
+			<Navbar />
 			<button>x</button>
 			<p>hi</p>
 		</>
