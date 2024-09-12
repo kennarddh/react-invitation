@@ -16,8 +16,12 @@ const App: FC = () => {
 	return (
 		<>
 			<Cover isShowing={IsCoverShowing} onHideCover={() => HideCover()} />
-			<Navbar />
-			<Hero />
+			{IsCoverShowing ? null : (
+				<>
+					<Navbar />
+					<Hero />
+				</>
+			)}
 		</>
 	)
 }
