@@ -12,11 +12,11 @@ export const Container = styled.div`
 	gap: 200px;
 `
 
-export const Profile = styled.div`
+export const Profile = styled.div<{ reversed: boolean }>`
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	flex-direction: row;
+	flex-direction: ${props => (props.reversed ? 'row-reverse' : 'row')};
 	align-items: center;
 	gap: 200px;
 `
