@@ -3,6 +3,7 @@ import { FC, useCallback, useEffect, useState } from 'react'
 import Cover from 'Components/Cover/Cover'
 import Hero from 'Components/Hero/Hero'
 import Navbar from 'Components/Navbar/Navbar'
+import Profiles from 'Components/Profiles/Profiles'
 
 const App: FC = () => {
 	const [IsCoverShowing, SetIsCoverShowing] = useState(true)
@@ -20,6 +21,7 @@ const App: FC = () => {
 				<>
 					<Navbar />
 					<Hero />
+					<Profiles />
 				</>
 			)}
 		</>
