@@ -16,7 +16,7 @@ const Profiles: FC = () => {
 					'dari london utara',
 					'@adinda',
 				]}
-				imageSrc='https://api.our-wedding.link/uploads/199a6800-6dc1-11ef-917a-61dad04cf808.jpg'
+				imageSrc='https://api.our-wedding.link/uploads/8f0a4d10-80ce-11ef-9f41-add1e477f246.jpg'
 			/>
 			<Profile
 				reversed
@@ -29,7 +29,7 @@ const Profiles: FC = () => {
 					'dari jakarta, indonesia',
 					'@john_doe',
 				]}
-				imageSrc='https://api.our-wedding.link/uploads/3ef9d1d0-6dc1-11ef-917a-61dad04cf808.jpg'
+				imageSrc='https://api.our-wedding.link/uploads/8f0a4d10-80ce-11ef-9f41-add1e477f246.jpg'
 			/>
 		</Container>
 	)
