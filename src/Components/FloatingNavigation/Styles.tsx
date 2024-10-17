@@ -26,6 +26,7 @@ export const NavButton = styled.button<{ active: boolean }>`
 	border: none;
 
 	background-color: ${({ active }) => (active ? '#ff8f8f' : '#c7c7c7')};
+	text-decoration: ${({ active }) => (active ? 'underline' : 'unset')};
 	color: white;
 
 	cursor: pointer;
