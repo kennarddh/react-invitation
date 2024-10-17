@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useState } from 'react'
 
 import Cover from 'Components/Cover/Cover'
+import FloatingNavigation from 'Components/FloatingNavigation/FloatingNavigation'
 import Hero from 'Components/Hero/Hero'
 import Navbar from 'Components/Navbar/Navbar'
 import Profiles from 'Components/Profiles/Profiles'
@@ -19,6 +20,7 @@ const App: FC = () => {
 			<Cover isShowing={IsCoverShowing} onHideCover={() => HideCover()} />
 			{IsCoverShowing ? null : (
 				<>
+					<FloatingNavigation />
 					<Navbar />
 					<Hero />
 					<Profiles />

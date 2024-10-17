@@ -9,9 +9,8 @@ import {
 } from 'react'
 
 interface ISectionContext {
-	// CurrentSectionID: string
 	RegisteredSections: Record<string, IRegisteredSection>
-	RegisterSection: (id: string, ref: RefObject<HTMLElement>) => void
+	RegisterSection: (id: string, registeredSection: IRegisteredSection) => void
 	UnregisterSection: (id: string) => void
 	CurrentSectionID: string | null
 }
@@ -22,6 +21,7 @@ interface ISectionContextProvider {
 
 export interface IRegisteredSection {
 	ref: RefObject<HTMLElement>
+	name: string
 }
 
 export const SectionContext = createContext<ISectionContext>(
@@ -36,10 +36,10 @@ export const SectionProvider: FC<ISectionContextProvider> = ({ children }) => {
 	const [CurrentSectionID, SetCurrentSection] = useState<string | null>(null)
 
 	const RegisterSection = useCallback(
-		(id: string, ref: RefObject<HTMLElement>) => {
+		(id: string, registeredSection: IRegisteredSection) => {
 			SetRegisteredSections(prev => ({
 				...prev,
-				[id]: { ref },
+				[id]: registeredSection,
 			}))
 		},
 		[],

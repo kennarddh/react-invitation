@@ -19,7 +19,7 @@ const Hero: FC = () => {
 	const { RegisterSection, UnregisterSection } = useContext(SectionContext)
 
 	useEffect(() => {
-		RegisterSection('hero', ContainerRef)
+		RegisterSection('hero', { ref: ContainerRef, name: 'Hero' })
 
 		return () => UnregisterSection('hero')
 	}, [RegisterSection, UnregisterSection])

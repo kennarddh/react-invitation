@@ -11,7 +11,7 @@ const Profiles: FC = () => {
 	const { RegisterSection, UnregisterSection } = useContext(SectionContext)
 
 	useEffect(() => {
-		RegisterSection('profile', ContainerRef)
+		RegisterSection('profile', { ref: ContainerRef, name: 'Profile' })
 
 		return () => UnregisterSection('profile')
 	}, [RegisterSection, UnregisterSection])
