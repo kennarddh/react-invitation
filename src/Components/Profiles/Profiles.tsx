@@ -1,11 +1,23 @@
-import { FC } from 'react'
+import { FC, useContext, useEffect, useRef } from 'react'
+
+import { SectionContext } from 'Contexts/SectionContext'
 
 import Profile from './Profile'
 import { Container } from './Styles'
 
 const Profiles: FC = () => {
+	const ContainerRef = useRef<HTMLElement>(null)
+
+	const { RegisterSection, UnregisterSection } = useContext(SectionContext)
+
+	useEffect(() => {
+		RegisterSection('profile', ContainerRef)
+
+		return () => UnregisterSection('profile')
+	}, [RegisterSection, UnregisterSection])
+
 	return (
-		<Container>
+		<Container ref={ContainerRef}>
 			<Profile
 				imageBackgroundText='The Bride'
 				name='Adinda Mawaria'

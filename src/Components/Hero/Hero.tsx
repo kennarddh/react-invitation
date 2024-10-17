@@ -1,4 +1,6 @@
-import { FC } from 'react'
+import { FC, useContext, useEffect, useRef } from 'react'
+
+import { SectionContext } from 'Contexts/SectionContext'
 
 import {
 	BottomContainer,
@@ -12,8 +14,18 @@ import {
 } from './Styles'
 
 const Hero: FC = () => {
+	const ContainerRef = useRef<HTMLElement>(null)
+
+	const { RegisterSection, UnregisterSection } = useContext(SectionContext)
+
+	useEffect(() => {
+		RegisterSection('hero', ContainerRef)
+
+		return () => UnregisterSection('hero')
+	}, [RegisterSection, UnregisterSection])
+
 	return (
-		<Container>
+		<Container ref={ContainerRef}>
 			<ColorOverlay />
 			<TitleContainer>
 				<Title>Design & Preset</Title>
