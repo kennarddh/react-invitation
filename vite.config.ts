@@ -34,7 +34,7 @@ export const resolveAlias = Object.entries(relativeAlias).reduce(
 export default defineConfig(({ mode }) => {
 	const envPrefix: string[] = ['APP_']
 
-	const { PORT = 3000, OPEN_BROWSER = 'true' } = {
+	const { PORT = '3000', OPEN_BROWSER = 'true' } = {
 		...loadEnv(mode, process.cwd(), ''),
 	}
 
@@ -55,7 +55,7 @@ export default defineConfig(({ mode }) => {
 			alias: resolveAlias,
 		},
 		server: {
-			port: PORT || 3000,
+			port: parseInt(PORT, 10) || 3000,
 			open: OPEN_BROWSER === 'true' ? true : false,
 		},
 		envPrefix,
